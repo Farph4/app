@@ -1065,6 +1065,149 @@ body {
   max-width: 380px;
 }
 
+/* ─── Transactions ──────────────────────────────────────────────────────────── */
+
+.transaction-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.transaction-list-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.transaction-list-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.transaction-list-title {
+  margin: 0 0 4px;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.transaction-list-subtitle {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.transaction-list-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-list-item {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.transaction-list-item:last-child { border-bottom: none; }
+
+.transaction-list-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.transaction-list-icon.success {
+  background: rgba(0, 200, 122, 0.12);
+  color: var(--green);
+}
+
+.transaction-list-icon.loss {
+  background: rgba(255, 71, 87, 0.12);
+  color: var(--red);
+}
+
+.transaction-list-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-list-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.transaction-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.transaction-title-wrap strong {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.transaction-contract {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.transaction-profit {
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.transaction-profit.positive { color: var(--green); }
+.transaction-profit.negative { color: var(--red); }
+
+.transaction-list-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.transaction-list-meta span:not(:last-child)::after {
+  content: '·';
+  margin-left: 8px;
+  color: var(--border-2);
+}
+
+.transaction-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
 /* ─── Markets ─────────────────────────────────────────────────────────────────── */
 
 .live-indicator {

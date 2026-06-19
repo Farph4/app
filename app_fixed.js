@@ -1,318 +1,30 @@
 const CORRECT_PASSWORD = 'NqshPaYIGR.N992s2vzG';
 
 const transactionRecords = [
-  {
-    id: 'tx-001',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:32:22.000 GMT',
-    entryPoint: 266023.80,
-    exitPoint: 266023.80,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: '960436559',
-  },
-  {
-    id: 'tx-002',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:32:15.000 GMT',
-    entryPoint: 266023.51,
-    exitPoint: 266023.51,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: '960434999',
-  },
-  {
-    id: 'tx-003',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:32:10.000 GMT',
-    entryPoint: 266030.27,
-    exitPoint: 266030.27,
-    buyPrice: 0.35,
-    profit: -0.35,
-    status: 'Perdida',
-    reference: '960433699',
-  },
-  {
-    id: 'tx-004',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:32:04.000 GMT',
-    entryPoint: 266011.13,
-    exitPoint: 266011.13,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: '960432179',
-  },
-  {
-    id: 'tx-005',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:32:00.000 GMT',
-    entryPoint: 266012.00,
-    exitPoint: 266012.00,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: '960431039',
-  },
-  {
-    id: 'tx-006',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:31:54.000 GMT',
-    entryPoint: 265982.15,
-    exitPoint: 265982.15,
-    buyPrice: 0.35,
-    profit: -0.35,
-    status: 'Perdida',
-    reference: '960429499',
-  },
-  {
-    id: 'tx-007',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:31:48.000 GMT',
-    entryPoint: 266040.78,
-    exitPoint: 266040.78,
-    buyPrice: 0.35,
-    profit: -0.35,
-    status: 'Perdida',
-    reference: '960428039',
-  },
-  {
-    id: 'tx-008',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:59.000 GMT',
-    entryPoint: 265512.19,
-    exitPoint: 265512.19,
-    buyPrice: 0.35,
-    profit: -0.35,
-    status: 'Perdida',
-    reference: '960397859',
-  },
-  {
-    id: 'tx-009',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:45.000 GMT',
-    entryPoint: 265541.61,
-    exitPoint: 265541.61,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: '960393839',
-  },
-  {
-    id: 'tx-010',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:41.000 GMT',
-    entryPoint: 265530.80,
-    exitPoint: 265530.80,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-010',
-  },
-  {
-    id: 'tx-011',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:35.000 GMT',
-    entryPoint: 265520.45,
-    exitPoint: 265520.45,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-011',
-  },
-  {
-    id: 'tx-012',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:29.000 GMT',
-    entryPoint: 265510.92,
-    exitPoint: 265510.92,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-012',
-  },
-  {
-    id: 'tx-013',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:23.000 GMT',
-    entryPoint: 265500.18,
-    exitPoint: 265500.18,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-013',
-  },
-  {
-    id: 'tx-014',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:17.000 GMT',
-    entryPoint: 265490.60,
-    exitPoint: 265490.60,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-014',
-  },
-  {
-    id: 'tx-015',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:11.000 GMT',
-    entryPoint: 265480.33,
-    exitPoint: 265480.33,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-015',
-  },
-  {
-    id: 'tx-016',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:29:05.000 GMT',
-    entryPoint: 265470.75,
-    exitPoint: 265470.75,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-016',
-  },
-  {
-    id: 'tx-017',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:28:59.000 GMT',
-    entryPoint: 265460.20,
-    exitPoint: 265460.20,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-017',
-  },
-  {
-    id: 'tx-018',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:28:53.000 GMT',
-    entryPoint: 265450.44,
-    exitPoint: 265450.44,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-018',
-  },
-  {
-    id: 'tx-019',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:28:47.000 GMT',
-    entryPoint: 265440.88,
-    exitPoint: 265440.88,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-019',
-  },
-  {
-    id: 'tx-020',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:28:41.000 GMT',
-    entryPoint: 265430.16,
-    exitPoint: 265430.16,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-020',
-  },
-  {
-    id: 'tx-021',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:28:35.000 GMT',
-    entryPoint: 265420.52,
-    exitPoint: 265420.52,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-021',
-  },
-  {
-    id: 'tx-022',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:28:29.000 GMT',
-    entryPoint: 265410.90,
-    exitPoint: 265410.90,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-022',
-  },
-  {
-    id: 'tx-023',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:28:23.000 GMT',
-    entryPoint: 265400.25,
-    exitPoint: 265400.25,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-023',
-  },
-  {
-    id: 'tx-024',
-    market: 'Volatility 50 (1s) Index',
-    contract: 'Under 5',
-    barrier: 5,
-    entryTime: '2026-06-19 02:28:17.000 GMT',
-    entryPoint: 265390.70,
-    exitPoint: 265390.70,
-    buyPrice: 0.35,
-    profit: 0.31,
-    status: 'Exitosa',
-    reference: 'TX-024',
-  },
+  { id: 'tx-001', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:32:22.000 GMT', entryPoint: 266023.80, exitPoint: 266023.80, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: '960436559' },
+  { id: 'tx-002', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:31:54.000 GMT', entryPoint: 266023.51, exitPoint: 266023.51, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: '960434999' },
+  { id: 'tx-003', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:31:28.000 GMT', entryPoint: 266030.27, exitPoint: 266030.27, buyPrice: 0.35, profit: -0.35, status: 'Perdida', reference: '960433699' },
+  { id: 'tx-004', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:31:00.000 GMT', entryPoint: 266011.13, exitPoint: 266011.13, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: '960432179' },
+  { id: 'tx-005', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:30:22.000 GMT', entryPoint: 266012.00, exitPoint: 266012.00, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: '960431039' },
+  { id: 'tx-006', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:29:54.000 GMT', entryPoint: 265982.15, exitPoint: 265982.15, buyPrice: 0.35, profit: -0.35, status: 'Perdida', reference: '960429499' },
+  { id: 'tx-007', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:29:28.000 GMT', entryPoint: 266040.78, exitPoint: 266040.78, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: '960428039' },
+  { id: 'tx-008', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:28:54.000 GMT', entryPoint: 266025.40, exitPoint: 266025.40, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX008' },
+  { id: 'tx-009', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:28:28.000 GMT', entryPoint: 266018.90, exitPoint: 266018.90, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX009' },
+  { id: 'tx-010', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:28:00.000 GMT', entryPoint: 266005.60, exitPoint: 266005.60, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX010' },
+  { id: 'tx-011', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:27:30.000 GMT', entryPoint: 266001.20, exitPoint: 266001.20, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX011' },
+  { id: 'tx-012', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:27:00.000 GMT', entryPoint: 265995.30, exitPoint: 265995.30, buyPrice: 0.35, profit: -0.35, status: 'Perdida', reference: 'TX012' },
+  { id: 'tx-013', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:26:30.000 GMT', entryPoint: 265988.45, exitPoint: 265988.45, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX013' },
+  { id: 'tx-014', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:26:00.000 GMT', entryPoint: 265982.70, exitPoint: 265982.70, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX014' },
+  { id: 'tx-015', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:25:30.000 GMT', entryPoint: 265975.20, exitPoint: 265975.20, buyPrice: 0.35, profit: -0.35, status: 'Perdida', reference: 'TX015' },
+  { id: 'tx-016', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:25:00.000 GMT', entryPoint: 265968.90, exitPoint: 265968.90, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX016' },
+  { id: 'tx-017', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:24:30.000 GMT', entryPoint: 265962.40, exitPoint: 265962.40, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX017' },
+  { id: 'tx-018', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:24:00.000 GMT', entryPoint: 265955.80, exitPoint: 265955.80, buyPrice: 0.35, profit: -0.35, status: 'Perdida', reference: 'TX018' },
+  { id: 'tx-019', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:23:30.000 GMT', entryPoint: 265949.30, exitPoint: 265949.30, buyPrice: 0.35, profit: -0.35, status: 'Perdida', reference: 'TX019' },
+  { id: 'tx-020', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:23:00.000 GMT', entryPoint: 265942.75, exitPoint: 265942.75, buyPrice: 0.35, profit: -0.35, status: 'Perdida', reference: 'TX020' },
+  { id: 'tx-021', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:22:30.000 GMT', entryPoint: 265936.50, exitPoint: 265936.50, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX021' },
+  { id: 'tx-022', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:22:00.000 GMT', entryPoint: 265930.20, exitPoint: 265930.20, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX022' },
+  { id: 'tx-023', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:21:30.000 GMT', entryPoint: 265924.60, exitPoint: 265924.60, buyPrice: 0.35, profit: 0.31, status: 'Completado', reference: 'TX023' },
+  { id: 'tx-024', market: 'Volatility 50 (1s) Index', contract: 'Under 5', barrier: 5, entryTime: '2026-06-18 22:21:00.000 GMT', entryPoint: 265918.30, exitPoint: 265918.30, buyPrice: 0.35, profit: -0.35, status: 'Perdida', reference: 'TX024' },
 ];
 
 const depositRecords = [
@@ -323,7 +35,7 @@ const depositRecords = [
     status: 'Completado',
     method: 'Transferencia',
     reference: 'MTR-20260618-001',
-    description: 'Depósito realizado y aplicado correctamente a la cuenta.',
+    description: 'Dep�sito realizado y aplicado correctamente a la cuenta.',
   },
 ];
 
@@ -375,7 +87,7 @@ function renderPasswordGate() {
         <div class="pw-error" id="pw-error" style="display:none;"></div>
         <button type="submit" class="pw-btn">Ingresar</button>
       </form>
-      <p class="pw-footer">Acceso restringido · Solo usuarios autorizados</p>
+      <p class="pw-footer">Acceso restringido � Solo usuarios autorizados</p>
     </div>
   </div>`;
 
@@ -388,7 +100,7 @@ function renderPasswordGate() {
       unlocked = true;
       render();
     } else {
-      error.value = 'Contraseña incorrecta. Inténtalo de nuevo.';
+      error.value = 'Contraseña incorrecta. Int�ntalo de nuevo.';
       shaking.value = true;
       document.getElementById('pw-error').textContent = error.value;
       document.getElementById('pw-error').style.display = 'block';
@@ -427,8 +139,8 @@ function renderDashboard() {
         <div class="profile-btn" id="profile-btn">
           <div class="avatar">AL</div>
           <div class="profile-info">
-            <span class="profile-name">Alexis López</span>
-            <span class="profile-flag">🇨🇴 Colombia</span>
+            <span class="profile-name">Alexis L�pez</span>
+            <span class="profile-flag">???? Colombia</span>
           </div>
           <svg class="chevron ${profileOpen ? 'open' : ''}" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 9l6 6 6-6" />
@@ -448,14 +160,14 @@ function renderDashboard() {
               <polyline points="16 17 21 12 16 7" />
               <line x1="21" y1="12" x2="9" y2="12" />
             </svg>
-            Cerrar sesión
+            Cerrar sesi�n
           </button>
         </div>
       </div>
     </header>
     <nav class="nav-tabs">
       <button class="nav-tab ${activeTab === 'resumen' ? 'active' : ''}" data-tab="resumen">${homeIcon()}<span>Resumen</span></button>
-      <button class="nav-tab ${activeTab === 'depositos' ? 'active' : ''}" data-tab="depositos">${depositIcon()}<span>Depósitos</span></button>
+      <button class="nav-tab ${activeTab === 'depositos' ? 'active' : ''}" data-tab="depositos">${depositIcon()}<span>Dep�sitos</span></button>
       <button class="nav-tab ${activeTab === 'transacciones' ? 'active' : ''}" data-tab="transacciones">${transactIcon()}<span>Transacciones</span></button>
       <button class="nav-tab ${activeTab === 'mercados' ? 'active' : ''}" data-tab="mercados">${marketIcon()}<span>Mercados</span></button>
     </nav>
@@ -530,6 +242,14 @@ function renderTabContent() {
 
   if (activeTab === 'resumen') {
     content.innerHTML = renderResumenTab();
+    // Withdraw button listener after rendering
+    const withdrawBtn = document.getElementById('withdraw-btn');
+    if (withdrawBtn) {
+      withdrawBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showWithdrawModal();
+      });
+    }
   } else if (activeTab === 'depositos') {
     content.innerHTML = renderDepositosTab();
   } else if (activeTab === 'transacciones') {
@@ -543,12 +263,12 @@ function renderTabContent() {
 function renderResumenTab() {
   const latestDeposit = depositRecords[depositRecords.length - 1];
   const totalDeposits = depositRecords.reduce((total, deposit) => total + deposit.amount, 0);
+  
   const totalProfit = transactionRecords.reduce((sum, tx) => sum + tx.profit, 0);
-  const successfulTransactions = transactionRecords.filter((tx) => tx.status === 'Exitosa').length;
-  const totalTransactions = transactionRecords.length;
-  const winRate = totalTransactions > 0 ? ((successfulTransactions / totalTransactions) * 100).toFixed(1) : '0.0';
+  const completedTx = transactionRecords.filter(tx => tx.status === 'Completado').length;
+  const winRate = transactionRecords.length > 0 ? ((completedTx / transactionRecords.length) * 100).toFixed(1) : 0;
+  
   const availableBalance = totalDeposits + totalProfit;
-  const latestTransaction = transactionRecords[0];
 
   return `
     <div class="tab-content">
@@ -563,8 +283,8 @@ function renderResumenTab() {
           </svg>
         </div>
         <div class="deposit-success-content">
-          <div class="deposit-success-title">Depósito realizado correctamente</div>
-          <div class="deposit-success-text">Se aplicó un depósito de ${formatCurrency(latestDeposit.amount)} a tu cuenta.</div>
+          <div class="deposit-success-title">Dep�sito realizado correctamente</div>
+          <div class="deposit-success-text">Se aplic� un dep�sito de ${formatCurrency(latestDeposit.amount)} a tu cuenta.</div>
         </div>
       </div>
       <div class="balance-card">
@@ -574,15 +294,9 @@ function renderResumenTab() {
           <span class="balance-currency">USD</span>
           <span class="balance-value">${availableBalance.toFixed(2)}</span>
         </div>
-        <div class="balance-sub">Cuenta de Trading · M Transactions</div>
+        <div class="balance-sub">Cuenta de Trading � M Transactions</div>
         <div class="balance-actions">
-          <button class="balance-action-btn primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
-            Depositar
-          </button>
-          <button class="balance-action-btn secondary">
+          <button class="balance-action-btn secondary" id="withdraw-btn">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5" />
             </svg>
@@ -611,20 +325,19 @@ function renderResumenTab() {
             </svg>
           </div>
           <div class="stat-info">
-            <span class="stat-label">Pérdidas Totales</span>
-            <span class="stat-value">${totalProfit >= 0 ? '$0.00' : formatCurrency(Math.abs(totalProfit))}</span>
+            <span class="stat-label">P�rdidas Totales</span>
+            <span class="stat-value">${completedTx > 0 && totalProfit < 0 ? formatCurrency(Math.abs(totalProfit)) : '$0.00'}</span>
           </div>
         </div>
         <div class="stat-card">
           <div class="stat-icon blue">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="17 1 21 5 17 9" />
-              <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+              <rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" />
             </svg>
           </div>
           <div class="stat-info">
-            <span class="stat-label">Transacciones Exitosas</span>
-            <span class="stat-value">${successfulTransactions}</span>
+            <span class="stat-label">Dep�sitos Totales</span>
+            <span class="stat-value">${formatCurrency(totalDeposits)}</span>
           </div>
         </div>
         <div class="stat-card">
@@ -644,11 +357,11 @@ function renderResumenTab() {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
-          <span>Último Depósito</span>
+          <span>�ltimo Dep�sito</span>
         </div>
         <div class="info-card-body">
           <div class="deposit-row">
-            <span class="deposit-label">Depósito realizado</span>
+            <span class="deposit-label">Dep�sito realizado</span>
             <span class="deposit-badge">${latestDeposit.status}</span>
           </div>
           <div class="deposit-amount-row">
@@ -658,29 +371,10 @@ function renderResumenTab() {
           <p class="deposit-note">${latestDeposit.description}</p>
         </div>
       </div>
-      <div class="info-card">
-        <div class="info-card-header">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 3v18h18" /><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
-          </svg>
-          <span>Última Transacción Exitosa</span>
-        </div>
-        <div class="info-card-body">
-          <div class="deposit-row">
-            <span class="deposit-label">${latestTransaction.market}</span>
-            <span class="deposit-badge">${latestTransaction.contract}</span>
-          </div>
-          <div class="deposit-amount-row">
-            <span class="deposit-amount">${formatCurrency(latestTransaction.profit)}</span>
-            <span class="deposit-date">${latestTransaction.entryTime.replace('.000 GMT', '')}</span>
-          </div>
-          <p class="deposit-note">Referencia ${latestTransaction.reference} · Barrera ${latestTransaction.barrier} · Entrada ${latestTransaction.entryPoint.toFixed(2)}</p>
-        </div>
-      </div>
       <div class="account-info-card">
         <div class="account-info-row">
           <span class="account-info-label">Titular</span>
-          <span class="account-info-value">Alexis López 🇨🇴</span>
+          <span class="account-info-value">Alexis L�pez ????</span>
         </div>
         <div class="account-info-row">
           <span class="account-info-label">Tipo de cuenta</span>
@@ -688,7 +382,7 @@ function renderResumenTab() {
         </div>
         <div class="account-info-row">
           <span class="account-info-label">Moneda</span>
-          <span class="account-info-value">USD (Dólar)</span>
+          <span class="account-info-value">USD (D�lar)</span>
         </div>
         <div class="account-info-row">
           <span class="account-info-label">Estado</span>
@@ -708,7 +402,7 @@ function renderDepositosTab() {
   return `
     <div class="tab-content">
       <div class="section-header">
-        <h1 class="section-title">Depósitos</h1>
+        <h1 class="section-title">Dep�sitos</h1>
         <span class="section-badge">Habilitada</span>
       </div>
       <div class="deposit-summary-grid">
@@ -717,7 +411,7 @@ function renderDepositosTab() {
           <strong class="summary-value">${formatCurrency(totalDeposits)}</strong>
         </div>
         <div class="summary-card">
-          <span class="summary-label">Depósitos registrados</span>
+          <span class="summary-label">Dep�sitos registrados</span>
           <strong class="summary-value">${depositRecords.length}</strong>
         </div>
         <div class="summary-card">
@@ -728,8 +422,8 @@ function renderDepositosTab() {
       <div class="deposit-list-card">
         <div class="deposit-list-header">
           <div>
-            <h2 class="deposit-list-title">Historial de depósitos</h2>
-            <p class="deposit-list-subtitle">Los depósitos realizados se registran aquí automáticamente.</p>
+            <h2 class="deposit-list-title">Historial de dep�sitos</h2>
+            <p class="deposit-list-subtitle">Los dep�sitos realizados se registran aqu� autom�ticamente.</p>
           </div>
           <span class="deposit-list-status">
             <span class="status-dot"></span>
@@ -766,20 +460,15 @@ function renderDepositosTab() {
 function renderTransaccionesTab() {
   const totalProfit = transactionRecords.reduce((sum, tx) => sum + tx.profit, 0);
   const totalBuy = transactionRecords.reduce((sum, tx) => sum + tx.buyPrice, 0);
-  const completed = transactionRecords.filter((tx) => tx.status === 'Exitosa').length;
-  const lost = transactionRecords.filter((tx) => tx.status === 'Perdida').length;
-  const winRate = transactionRecords.length > 0 ? ((completed / transactionRecords.length) * 100).toFixed(1) : '0.0';
+  const completed = transactionRecords.filter(tx => tx.status === 'Completado').length;
+  const lost = transactionRecords.filter(tx => tx.status === 'Perdida').length;
+  const pending = transactionRecords.filter(tx => tx.status === 'Pendiente').length;
+  const winRate = ((completed / transactionRecords.length) * 100).toFixed(1);
 
   return `
     <div class="tab-content">
       <div class="section-header">
         <h1 class="section-title">Transacciones</h1>
-        <div class="section-filters">
-          <button class="filter-btn active">Todas</button>
-          <button class="filter-btn">Exitosas</button>
-          <button class="filter-btn">Perdidas</button>
-          <button class="filter-btn">Under 5</button>
-        </div>
       </div>
       <div class="transaction-summary-grid">
         <div class="summary-card">
@@ -803,40 +492,45 @@ function renderTransaccionesTab() {
         <div class="transaction-list-header">
           <div>
             <h2 class="transaction-list-title">Historial de transacciones</h2>
-            <p class="transaction-list-subtitle">24 operaciones Under 5 registradas con apuesta de $0.35 USD.</p>
+            <p class="transaction-list-subtitle">Tus operaciones de trading aparecen aqu�.</p>
           </div>
           <span class="transaction-list-status">
             <span class="status-dot"></span>
-            ${completed} exitosas
+            Activo
           </span>
         </div>
         <div class="transaction-list">
-          ${transactionRecords.map((tx) => `
+          ${transactionRecords.map(tx => `
             <div class="transaction-list-item">
-              <div class="transaction-list-icon ${tx.status === 'Exitosa' ? 'success' : 'loss'}">
-                ${tx.status === 'Exitosa'
+              <div class="transaction-list-icon ${tx.status === 'Completado' ? 'success' : tx.status === 'Pendiente' ? 'pending' : 'loss'}">
+                ${tx.status === 'Completado' 
                   ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5" /></svg>`
-                  : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>`
+                  : tx.status === 'Pendiente'
+                  ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>`
+                  : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 1.71-3L13.71 3.86a2 2 0 0 1-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>`
                 }
               </div>
               <div class="transaction-list-main">
                 <div class="transaction-list-row">
-                  <div class="transaction-title-wrap">
+                  <div>
                     <strong>${tx.market}</strong>
-                    <span class="transaction-contract">${tx.contract} · Barrera ${tx.barrier}</span>
+                    <span class="transaction-contract">${tx.contract}</span>
+                    ${tx.status === 'Pendiente' ? '<span class="withdrawal-badge">Retiro</span>' : ''}
                   </div>
-                  <span class="transaction-profit ${tx.profit >= 0 ? 'positive' : 'negative'}">${formatCurrency(tx.profit)}</span>
+                  <span class="transaction-profit ${tx.profit >= 0 && tx.status !== 'Pendiente' ? 'positive' : tx.status === 'Pendiente' ? 'pending-amount' : 'negative'}">${tx.status === 'Pendiente' ? '-' : ''}${formatCurrency(Math.abs(tx.profit))}</span>
                 </div>
                 <div class="transaction-list-meta">
-                  <span>${tx.entryTime.replace('.000 GMT', '')}</span>
-                  <span>Ref. ${tx.reference}</span>
-                  <span>Entrada ${tx.entryPoint.toFixed(2)}</span>
-                  <span>Salida ${tx.exitPoint.toFixed(2)}</span>
+                  <span>${tx.entryTime.replace('000 GMT', '').trim()}</span>
+                  <span>${tx.reference}</span>
                 </div>
-                <div class="transaction-details">
-                  <span>Apuesta: ${formatCurrency(tx.buyPrice)}</span>
-                  <span>Resultado: ${tx.status}</span>
-                </div>
+                ${tx.type === 'withdrawal' 
+                  ? `<div class="transaction-details"><span>Monto solicitado: ${formatCurrency(tx.buyPrice)}</span></div>`
+                  : `<div class="transaction-details">
+                      <span>Punto entrada: ${tx.entryPoint}</span>
+                      <span>Punto salida: ${tx.exitPoint}</span>
+                      <span>Apuesta: ${formatCurrency(tx.buyPrice)}</span>
+                    </div>`
+                }
               </div>
             </div>
           `).join('')}
@@ -885,7 +579,7 @@ function initVol50() {
         <div class="market-symbol-badge vol50">V50</div>
         <div>
           <div class="market-name">Volatility 50 (1s) Index</div>
-          <div class="market-symbol">1HZ50V · Deriv Synthetics</div>
+          <div class="market-symbol">1HZ50V � Deriv Synthetics</div>
         </div>
       </div>
       <div class="conn-status ${vol50Connected ? 'connected' : ''}">
@@ -895,8 +589,8 @@ function initVol50() {
     </div>
     <div class="market-price-row">
       <div class="market-price">
-        ${latest ? latest.price.toFixed(2) : '—'}
-        ${latest && prev ? `<span class="price-arrow ${priceUp ? 'up' : 'down'}">${priceUp ? '▲' : '▼'}</span>` : ''}
+        ${latest ? latest.price.toFixed(2) : '�'}
+        ${latest && prev ? `<span class="price-arrow ${priceUp ? 'up' : 'down'}">${priceUp ? '?' : '?'}</span>` : ''}
       </div>
       <div class="stability-badge ${stability}">
         ${stability === 'analyzing' ? `<span class="spin-dot"></span>Analizando...` : ''}
@@ -926,6 +620,8 @@ function initVol50() {
   `;
 
   if (vol50Ticks.length > 2) {
+    // Destroy existing chart before creating new one
+    if (vol50Chart) vol50Chart.destroy();
     const ctx = document.getElementById('vol50-chart').getContext('2d');
     vol50Chart = new Chart(ctx, {
       type: 'line',
@@ -959,7 +655,7 @@ function initVol10() {
         <div class="market-symbol-badge vol10">V10</div>
         <div>
           <div class="market-name">Volatility 10 Index</div>
-          <div class="market-symbol">R_10 · Deriv Synthetics</div>
+          <div class="market-symbol">R_10 � Deriv Synthetics</div>
         </div>
       </div>
       <div class="conn-status ${vol10Connected ? 'connected' : ''}">
@@ -969,10 +665,10 @@ function initVol10() {
     </div>
     <div class="market-price-row">
       <div class="market-price">
-        ${vol10Ticks.length ? vol10Ticks[vol10Ticks.length - 1].price.toFixed(3) : '—'}
-        ${vol10Ticks.length > 1 ? `<span class="price-arrow ${vol10Ticks[vol10Ticks.length - 1].price >= vol10Ticks[vol10Ticks.length - 2].price ? 'up' : 'down'}">${vol10Ticks[vol10Ticks.length - 1].price >= vol10Ticks[vol10Ticks.length - 2].price ? '▲' : '▼'}</span>` : ''}
+        ${vol10Ticks.length ? vol10Ticks[vol10Ticks.length - 1].price.toFixed(3) : '�'}
+        ${vol10Ticks.length > 1 ? `<span class="price-arrow ${vol10Ticks[vol10Ticks.length - 1].price >= vol10Ticks[vol10Ticks.length - 2].price ? 'up' : 'down'}">${vol10Ticks[vol10Ticks.length - 1].price >= vol10Ticks[vol10Ticks.length - 2].price ? '?' : '?'}</span>` : ''}
       </div>
-      ${vol10Ticks.length ? `<div class="last-digit-badge">Último dígito: <strong>${vol10Ticks[vol10Ticks.length - 1].digit}</strong></div>` : ''}
+      ${vol10Ticks.length ? `<div class="last-digit-badge">�ltimo d�gito: <strong>${vol10Ticks[vol10Ticks.length - 1].digit}</strong></div>` : ''}
     </div>
     <div class="chart-wrap">
       ${vol10Ticks.length > 2 ? '<canvas id="vol10-chart"></canvas>' : '<div class="chart-loading"><span class="loading-spinner"></span> Cargando datos de mercado...</div>'}
@@ -981,7 +677,7 @@ function initVol10() {
   `;
 }
 
-let vol50Ticks = [];
+let vol50Ticks = [{ price: 266025.40, time: Date.now() - 15000, digit: 0 }, { price: 266023.80, time: Date.now() - 14000, digit: 0 }, { price: 266026.20, time: Date.now() - 13000, digit: 0 }, { price: 266025.90, time: Date.now() - 12000, digit: 0 }, { price: 266024.50, time: Date.now() - 11000, digit: 0 }];
 let vol50Connected = false;
 let vol50Stability = 'analyzing';
 let vol10Ticks = [];
@@ -1038,6 +734,158 @@ function updateVol50Stability() {
   vol50Stability = cv < 0.15 ? 'stable' : 'unstable';
 }
 
+// Withdraw modal functions
+let solicitudesDirHandle = null;
+let currentWithdrawalCode = null;
+
+function generateHash(length = 16) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+
+function generateQRData(code) {
+  const svgStr = '<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="120" height="120" fill="%230f1829"/><rect x="15" y="15" width="90" height="90" fill="%23152035"/><text x="60" y="65" font-size="10" fill="%233b82f6" text-anchor="middle">' + code.substring(0, 8) + '</text></svg>';
+  return 'data:image/svg+xml;base64,' + btoa(svgStr);
+}
+
+async function getSolicitudesDir() {
+  if (!solicitudesDirHandle) {
+    try {
+      if ('showDirectoryPicker' in window) {
+        solicitudesDirHandle = await window.showDirectoryPicker();
+      } else {
+        // Fallback: no soporte para guardado autom�tico
+        return null;
+      }
+    } catch (err) {
+      solicitudesDirHandle = null;
+      return null;
+    }
+  }
+  return solicitudesDirHandle;
+}
+
+function showWithdrawModal() {
+  const html = `
+  <div class="modal-overlay" id="withdraw-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title">Solicitar Retiro</h2>
+        <button class="modal-close" id="modal-close">�</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-subtitle">Ingresa el monto a retirar (m�nimo $1 USD)</p>
+        <form class="withdraw-form" id="withdraw-form">
+          <div class="input-group">
+            <label class="input-label">Monto en USD</label>
+            <input type="number" class="modal-input" id="withdraw-amount" min="1" step="0.01" placeholder="0.00" required />
+          </div>
+          <div class="modal-error" id="withdraw-error" style="display:none;"></div>
+          <button type="submit" class="modal-submit-btn">Confirmar Retiro</button>
+        </form>
+      </div>
+    </div>
+  </div>`;
+  
+  document.body.insertAdjacentHTML('beforeend', html);
+  
+  const amountInput = document.getElementById('withdraw-amount');
+  const errorDiv = document.getElementById('withdraw-error');
+  
+  document.getElementById('modal-close').addEventListener('click', () => {
+    document.getElementById('withdraw-modal').remove();
+  });
+  
+  document.getElementById('withdraw-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const amount = parseFloat(amountInput.value);
+    if (amount && amount >= 1) {
+      await processWithdrawal(amount);
+    } else {
+      errorDiv.textContent = 'El monto m�nimo es $1 USD';
+      errorDiv.style.display = 'block';
+    }
+  });
+}
+
+async function processWithdrawal(amount) {
+  const now = new Date();
+  const timestamp = now.getTime();
+  const dateStr = now.toISOString().split('T')[0];
+  
+  // Generate unique hash code
+  const hash = generateHash(16);
+  currentWithdrawalCode = hash;
+  localStorage.setItem('withdrawalCode', hash);
+  
+  // Add withdrawal to transactions
+  const newTx = {
+    id: `wd-${timestamp}`,
+    market: 'Retiro',
+    contract: 'Retiro Bancario',
+    barrier: 0,
+    entryTime: `${dateStr} ${now.toTimeString().split(' ')[0]}.000 GMT`,
+    entryPoint: amount,
+    exitPoint: 0,
+    buyPrice: amount,
+    profit: -amount,
+    status: 'Pendiente',
+    reference: `WD-${hash}`,
+    type: 'withdrawal'
+  };
+  transactionRecords.unshift(newTx);
+  
+  // Cerrar sesi�n o cambiar c�digo
+  setTimeout(() => {
+    localStorage.removeItem('withdrawalCode');
+    currentWithdrawalCode = null;
+    sessionStorage.removeItem('mt_auth');
+    unlocked = false;
+    render();
+  }, 5000);
+  
+  // Mostrar c�digo hash y QR
+  showWithdrawalCode(hash, amount);
+  
+  document.getElementById('withdraw-modal').remove();
+  if (activeTab === 'transacciones') renderTabContent();
+}
+
+function showWithdrawalCode(hash, amount) {
+  const html = `
+  <div class="modal-overlay" id="withdrawal-code-modal">
+    <div class="modal-card" style="max-width: 400px;">
+      <div class="modal-header">
+        <h2 class="modal-title">C�digo de Retiro</h2>
+        <button class="modal-close" id="code-modal-close">�</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <p class="modal-subtitle">Guarda este c�digo para confirmar tu retiro</p>
+        <div class="withdrawal-code" style="font-size: 24px; font-weight: 700; color: var(--green); margin: 20px 0; letter-spacing: 3px;">
+          ${hash}
+        </div>
+        <div style="margin: 20px 0;">
+          <img src="${generateQRData(hash)}" alt="QR Code" style="width: 120px; height: 120px; margin: 0 auto;" />
+        </div>
+        <p style="color: var(--text-muted); font-size: 12px; margin-top: 10px;">
+          Monto: $${amount.toFixed(2)} USD<br>
+          Cierra sesi�n en 5 segundos...
+        </p>
+      </div>
+    </div>
+  </div>`;
+  
+  document.body.insertAdjacentHTML('beforeend', html);
+  
+  document.getElementById('code-modal-close').addEventListener('click', () => {
+    document.getElementById('withdrawal-code-modal').remove();
+  });
+}
+
 // Main render
 function render() {
   if (!unlocked) {
@@ -1055,3 +903,4 @@ function render() {
 document.addEventListener('DOMContentLoaded', () => {
   render();
 });
+
