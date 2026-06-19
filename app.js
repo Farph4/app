@@ -775,11 +775,6 @@ function renderTransaccionesTab() {
       <div class="section-header">
         <h1 class="section-title">Transacciones</h1>
         <div class="section-filters">
-          <button class="filter-btn active">Todas</button>
-          <button class="filter-btn">Exitosas</button>
-          <button class="filter-btn">Perdidas</button>
-          <button class="filter-btn">Under 5</button>
-        </div>
       </div>
       <div class="transaction-summary-grid">
         <div class="summary-card">
