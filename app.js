@@ -425,7 +425,10 @@ function renderDashboard() {
       </div>
       <div class="header-right" id="profile-container">
         <div class="profile-btn" id="profile-btn">
-          <div class="avatar">AL</div>
+          <div class="avatar-wrapper">
+            <div class="avatar">AL</div>
+            <span class="avatar-badge" id="avatar-badge"></span>
+          </div>
           <div class="profile-info">
             <span class="profile-name">Alexis López</span>
             <span class="profile-flag">🇨🇴 Colombia</span>
@@ -484,6 +487,19 @@ function renderDashboard() {
     unlocked = false;
     render();
   });
+
+  document.getElementById('retiros-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    showWithdrawModal();
+  });
+
+  const withdrawBtn = document.getElementById('withdraw-btn');
+  if (withdrawBtn) {
+    withdrawBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      showWithdrawModal();
+    });
+  }
 
   // Close profile menu on outside click
   document.addEventListener('click', () => {
@@ -575,20 +591,14 @@ function renderResumenTab() {
           <span class="balance-value">${availableBalance.toFixed(2)}</span>
         </div>
         <div class="balance-sub">Cuenta de Trading · M Transactions</div>
-        <div class="balance-actions">
-          <button class="balance-action-btn primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
-            Depositar
-          </button>
-          <button class="balance-action-btn secondary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5" />
-            </svg>
-            Retirar
-          </button>
-        </div>
+<div class="balance-actions">
+           <button class="balance-action-btn primary" id="withdraw-btn">
+             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+               <path d="M17 11l-5-5-5 5M17 18l-5-5-5 5" />
+             </svg>
+             Retirar
+           </button>
+         </div>
       </div>
       <div class="stats-grid">
         <div class="stat-card">
@@ -774,7 +784,7 @@ function renderTransaccionesTab() {
     <div class="tab-content">
       <div class="section-header">
         <h1 class="section-title">Transacciones</h1>
-        <div class="section-filters">
+        <div class="section-filters"> 
         </div>
       </div>
       <div class="transaction-summary-grid">
@@ -1032,6 +1042,143 @@ function updateVol50Stability() {
   const stdDev = Math.sqrt(variance);
   const cv = (stdDev / avg) * 100;
   vol50Stability = cv < 0.15 ? 'stable' : 'unstable';
+}
+
+// Withdraw modal functions
+let currentWithdrawalCode = null;
+
+function generateHash(length = 16) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let result = '';
+  for (let i = 0; i < length; i++) {
+    result += chars.charAt(Math.floor(Math.random() * chars.length));
+  }
+  return result;
+}
+
+function generateQRData(code) {
+  const svgStr = '<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120"><rect width="120" height="120" fill="%230f1829"/><rect x="15" y="15" width="90" height="90" fill="%23152035"/><text x="60" y="65" font-size="10" fill="%233b82f6" text-anchor="middle">' + code.substring(0, 8) + '</text></svg>';
+  return 'data:image/svg+xml;base64,' + btoa(svgStr);
+}
+
+function showWithdrawModal() {
+  const html = `
+  <div class="modal-overlay" id="withdraw-modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title">Solicitar Retiro</h2>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-subtitle">Ingresa el monto a retirar (mínimo $1 USD)</p>
+        <form class="withdraw-form" id="withdraw-form">
+          <div class="input-group">
+            <label class="input-label">Monto en USD</label>
+            <input type="number" class="modal-input" id="withdraw-amount" min="1" step="0.01" placeholder="0.00" required />
+          </div>
+          <div class="modal-error" id="withdraw-error" style="display:none;"></div>
+          <button type="submit" class="modal-submit-btn">Confirmar Retiro</button>
+        </form>
+      </div>
+    </div>
+  </div>`;
+
+  document.body.insertAdjacentHTML('beforeend', html);
+
+  const amountInput = document.getElementById('withdraw-amount');
+  const errorDiv = document.getElementById('withdraw-error');
+
+  document.getElementById('modal-close').addEventListener('click', () => {
+    document.getElementById('withdraw-modal').remove();
+  });
+
+  document.getElementById('withdraw-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const amount = parseFloat(amountInput.value);
+    if (amount && amount >= 1) {
+      await processWithdrawal(amount);
+    } else {
+      errorDiv.textContent = 'El monto mínimo es $1 USD';
+      errorDiv.style.display = 'block';
+    }
+  });
+}
+
+async function processWithdrawal(amount) {
+  const now = new Date();
+  const timestamp = now.getTime();
+  const dateStr = now.toISOString().split('T')[0];
+
+  // Generate unique hash code
+  const hash = generateHash(16);
+  currentWithdrawalCode = hash;
+  localStorage.setItem('withdrawalCode', hash);
+
+  // Add withdrawal to transactions
+  const newTx = {
+    id: `wd-${timestamp}`,
+    market: 'Retiro',
+    contract: 'Retiro Bancario',
+    barrier: 0,
+    entryTime: `${dateStr} ${now.toTimeString().split(' ')[0]}.000 GMT`,
+    entryPoint: amount,
+    exitPoint: 0,
+    buyPrice: amount,
+    profit: -amount,
+    status: 'Pendiente',
+    reference: `WD-${hash}`,
+    type: 'withdrawal'
+  };
+  transactionRecords.unshift(newTx);
+
+  // Show avatar badge (red dot on profile)
+  const avatarBadge = document.getElementById('avatar-badge');
+  if (avatarBadge) avatarBadge.classList.add('active');
+
+  // Cerrar sesión después de 5 segundos
+  setTimeout(() => {
+    localStorage.removeItem('withdrawalCode');
+    currentWithdrawalCode = null;
+    sessionStorage.removeItem('mt_auth');
+    unlocked = false;
+    render();
+  }, 5000);
+
+  // Mostrar código hash y QR
+  showWithdrawalCode(hash, amount);
+
+  document.getElementById('withdraw-modal').remove();
+  if (activeTab === 'transacciones') renderTabContent();
+}
+
+function showWithdrawalCode(hash, amount) {
+  const html = `
+  <div class="modal-overlay" id="withdrawal-code-modal">
+    <div class="modal-card" style="max-width: 420px;">
+      <div class="modal-header">
+        <h2 class="modal-title">Código de Retiro</h2>
+        <button class="modal-close" id="code-modal-close">&times;</button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <p class="modal-subtitle">Guarda este código para confirmar tu retiro</p>
+        <div style="font-size: 28px; font-weight: 800; color: var(--green); margin: 24px 0; letter-spacing: 4px; word-break: break-all;">
+          ${hash}
+        </div>
+        <div class="withdrawal-amount-box">
+          Monto: $${amount.toFixed(2)} USD
+        </div>
+        <p style="color: var(--text-muted); font-size: 12px; margin-top: 16px;">
+          Cierra sesión en 5 segundos...
+        </p>
+      </div>
+    </div>
+  </div>`;
+
+  document.body.insertAdjacentHTML('beforeend', html);
+
+  document.getElementById('code-modal-close').addEventListener('click', () => {
+    document.getElementById('withdrawal-code-modal').remove();
+  });
 }
 
 // Main render
