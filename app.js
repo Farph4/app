@@ -775,6 +775,7 @@ function renderTransaccionesTab() {
       <div class="section-header">
         <h1 class="section-title">Transacciones</h1>
         <div class="section-filters">
+        </div>
       </div>
       <div class="transaction-summary-grid">
         <div class="summary-card">
