@@ -488,19 +488,6 @@ function renderDashboard() {
     render();
   });
 
-  document.getElementById('retiros-btn').addEventListener('click', (e) => {
-    e.stopPropagation();
-    showWithdrawModal();
-  });
-
-  const withdrawBtn = document.getElementById('withdraw-btn');
-  if (withdrawBtn) {
-    withdrawBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      showWithdrawModal();
-    });
-  }
-
   // Close profile menu on outside click
   document.addEventListener('click', () => {
     profileOpen = false;
@@ -509,6 +496,29 @@ function renderDashboard() {
   });
 
   renderTabContent();
+}
+
+function renderTabContent() {
+  const content = document.getElementById('main-content');
+  if (!content) return;
+
+  if (activeTab === 'resumen') {
+    content.innerHTML = renderResumenTab();
+    // Withdraw button listener after rendering
+    const withdrawBtn = document.getElementById('withdraw-btn');
+    if (withdrawBtn) {
+      withdrawBtn.addEventListener('click', (e) => {
+        showWithdrawModal();
+      });
+    }
+  } else if (activeTab === 'depositos') {
+    content.innerHTML = renderDepositosTab();
+  } else if (activeTab === 'transacciones') {
+    content.innerHTML = renderTransaccionesTab();
+  } else if (activeTab === 'mercados') {
+    content.innerHTML = renderMercadosTab();
+    initMercados();
+  }
 }
 
 function homeIcon() {
@@ -538,22 +548,6 @@ function marketIcon() {
   return `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
   </svg>`;
-}
-
-function renderTabContent() {
-  const content = document.getElementById('main-content');
-  if (!content) return;
-
-  if (activeTab === 'resumen') {
-    content.innerHTML = renderResumenTab();
-  } else if (activeTab === 'depositos') {
-    content.innerHTML = renderDepositosTab();
-  } else if (activeTab === 'transacciones') {
-    content.innerHTML = renderTransaccionesTab();
-  } else if (activeTab === 'mercados') {
-    content.innerHTML = renderMercadosTab();
-    initMercados();
-  }
 }
 
 function renderResumenTab() {
