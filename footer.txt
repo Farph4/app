@@ -1,162 +1,331 @@
-const CORRECT_PASSWORD = 'NqshPaYIGR.N992s2vzG';
+﻿const CORRECT_PASSWORD = 'NqshPaYIGR.N992s2vzG';
 
 const transactionRecords = [
+   {
+     id: 'tx-001-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Under 5',
+     barrier: 5,
+     entryTime: '2026-06-26 05:00:15.000 GMT',
+     entryPoint: 268450.22,
+     exitPoint: 268450.18,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-001',
+   },
+   {
+     id: 'tx-002-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Over 5',
+     barrier: 5,
+     entryTime: '2026-06-26 05:45:32.000 GMT',
+     entryPoint: 268455.67,
+     exitPoint: 268455.72,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-002',
+   },
+   {
+     id: 'tx-003-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Under 5',
+     barrier: 5,
+     entryTime: '2026-06-26 06:20:45.000 GMT',
+     entryPoint: 268460.15,
+     exitPoint: 268460.10,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-003',
+   },
+   {
+     id: 'tx-004-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Under 5',
+     barrier: 5,
+     entryTime: '2026-06-26 07:10:22.000 GMT',
+     entryPoint: 268465.88,
+     exitPoint: 268465.85,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-004',
+   },
+   {
+     id: 'tx-005-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Over 5',
+     barrier: 5,
+     entryTime: '2026-06-26 07:55:18.000 GMT',
+     entryPoint: 268470.44,
+     exitPoint: 268470.50,
+     buyPrice: 0.35,
+     profit: -0.35,
+     status: 'Perdida',
+     reference: 'TX-2606-005',
+   },
+   {
+     id: 'tx-006-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Under 5',
+     barrier: 5,
+     entryTime: '2026-06-26 08:30:55.000 GMT',
+     entryPoint: 268475.23,
+     exitPoint: 268475.19,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-006',
+   },
+   {
+     id: 'tx-007-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Under 5',
+     barrier: 5,
+     entryTime: '2026-06-26 09:15:40.000 GMT',
+     entryPoint: 268480.67,
+     exitPoint: 268480.62,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-007',
+   },
+   {
+     id: 'tx-008-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Over 5',
+     barrier: 5,
+     entryTime: '2026-06-26 09:50:25.000 GMT',
+     entryPoint: 268485.91,
+     exitPoint: 268485.95,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-008',
+   },
+   {
+     id: 'tx-009-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Under 5',
+     barrier: 5,
+     entryTime: '2026-06-26 10:20:12.000 GMT',
+     entryPoint: 268490.33,
+     exitPoint: 268490.28,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-009',
+   },
+   {
+     id: 'tx-010-d26',
+     market: 'Volatility 50 (1s) Index',
+     contract: 'Under 5',
+     barrier: 5,
+     entryTime: '2026-06-26 10:45:00.000 GMT',
+     entryPoint: 268495.56,
+     exitPoint: 268495.50,
+     buyPrice: 0.35,
+     profit: 0.31,
+     status: 'Exitosa',
+     reference: 'TX-2606-010',
+},
     {
-      id: 'tx-001-d26',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-26 05:00:00.000 GMT',
-      entryPoint: 268450.00,
-      exitPoint: 268449.50,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-2606-001',
-    },
-    {
-      id: 'tx-002-d26',
+      id: 'tx-011-d26',
       market: 'Volatility 50 (1s) Index',
       contract: 'Over 5',
       barrier: 5,
-      entryTime: '2026-06-26 05:45:00.000 GMT',
-      entryPoint: 268460.00,
-      exitPoint: 268460.40,
-      buyPrice: 0.35,
-      profit: 0.31,
+      entryTime: '2026-06-26 05:15:45.000 GMT',
+      entryPoint: 268458.12,
+      exitPoint: 268458.18,
+      buyPrice: 5.00,
+      profit: 4.85,
       status: 'Exitosa',
-      reference: 'TX-2606-002',
+      reference: 'TX-2606-011',
     },
     {
-      id: 'tx-003-d26',
+      id: 'tx-012-d26',
       market: 'Volatility 50 (1s) Index',
       contract: 'Under 5',
       barrier: 5,
-      entryTime: '2026-06-26 06:30:00.000 GMT',
-      entryPoint: 268470.00,
-      exitPoint: 268469.50,
-      buyPrice: 0.35,
-      profit: 0.31,
+      entryTime: '2026-06-26 05:40:30.000 GMT',
+      entryPoint: 268462.45,
+      exitPoint: 268462.40,
+      buyPrice: 5.00,
+      profit: 4.85,
       status: 'Exitosa',
-      reference: 'TX-2606-003',
+      reference: 'TX-2606-012',
     },
     {
-      id: 'tx-004-d26',
+      id: 'tx-013-d26',
+      market: 'Volatility 10 Index',
+      contract: 'Under 5',
+      barrier: 5,
+      entryTime: '2026-06-26 06:05:10.000 GMT',
+      entryPoint: 1245.67,
+      exitPoint: 1245.62,
+      buyPrice: 2.50,
+      profit: 2.40,
+      status: 'Exitosa',
+      reference: 'TX-2606-013',
+    },
+    {
+      id: 'tx-014-d26',
+      market: 'Volatility 10 Index',
+      contract: 'Over 5',
+      barrier: 5,
+      entryTime: '2026-06-26 06:30:25.000 GMT',
+      entryPoint: 1246.88,
+      exitPoint: 1246.92,
+      buyPrice: 2.50,
+      profit: 2.40,
+      status: 'Exitosa',
+      reference: 'TX-2606-014',
+    },
+    {
+      id: 'tx-015-d26',
+      market: 'Volatility 50 (1s) Index',
+      contract: 'Under 5',
+      barrier: 5,
+      entryTime: '2026-06-26 06:55:15.000 GMT',
+      entryPoint: 268468.75,
+      exitPoint: 268468.70,
+      buyPrice: 5.00,
+      profit: 4.85,
+      status: 'Exitosa',
+      reference: 'TX-2606-015',
+    },
+    {
+      id: 'tx-016-d26',
       market: 'Volatility 50 (1s) Index',
       contract: 'Over 5',
       barrier: 5,
-      entryTime: '2026-06-26 07:15:00.000 GMT',
-      entryPoint: 268480.00,
-      exitPoint: 268480.40,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-2606-004',
+      entryTime: '2026-06-26 07:20:40.000 GMT',
+      entryPoint: 268472.30,
+      exitPoint: 268472.35,
+      buyPrice: 5.00,
+      profit: -5.00,
+      status: 'Perdida',
+      reference: 'TX-2606-016',
     },
     {
-      id: 'tx-005-d26',
+      id: 'tx-017-d26',
+      market: 'Volatility 100 (1s) Index',
+      contract: 'Under 5',
+      barrier: 5,
+      entryTime: '2026-06-26 07:45:55.000 GMT',
+      entryPoint: 3420.50,
+      exitPoint: 3420.45,
+      buyPrice: 10.00,
+      profit: 9.80,
+      status: 'Exitosa',
+      reference: 'TX-2606-017',
+    },
+    {
+      id: 'tx-018-d26',
+      market: 'Volatility 100 (1s) Index',
+      contract: 'Over 5',
+      barrier: 5,
+      entryTime: '2026-06-26 08:05:20.000 GMT',
+      entryPoint: 3422.10,
+      exitPoint: 3422.15,
+      buyPrice: 10.00,
+      profit: 9.80,
+      status: 'Exitosa',
+      reference: 'TX-2606-018',
+    },
+    {
+      id: 'tx-019-d26',
       market: 'Volatility 50 (1s) Index',
       contract: 'Under 5',
       barrier: 5,
-      entryTime: '2026-06-26 08:00:00.000 GMT',
-      entryPoint: 268490.00,
-      exitPoint: 268489.50,
-      buyPrice: 0.35,
-      profit: 0.31,
+      entryTime: '2026-06-26 08:35:45.000 GMT',
+      entryPoint: 268478.90,
+      exitPoint: 268478.85,
+      buyPrice: 5.00,
+      profit: 4.85,
       status: 'Exitosa',
-      reference: 'TX-2606-005',
+      reference: 'TX-2606-019',
     },
     {
-      id: 'tx-006-d26',
+      id: 'tx-020-d26',
+      market: 'Volatility 10 Index',
+      contract: 'Under 5',
+      barrier: 5,
+      entryTime: '2026-06-26 09:00:30.000 GMT',
+      entryPoint: 1247.55,
+      exitPoint: 1247.50,
+      buyPrice: 2.50,
+      profit: 2.40,
+      status: 'Exitosa',
+      reference: 'TX-2606-020',
+    },
+    {
+      id: 'tx-021-d26',
       market: 'Volatility 50 (1s) Index',
       contract: 'Over 5',
       barrier: 5,
-      entryTime: '2026-06-26 08:45:00.000 GMT',
-      entryPoint: 268500.00,
-      exitPoint: 268500.40,
-      buyPrice: 0.35,
-      profit: 0.31,
+      entryTime: '2026-06-26 09:25:15.000 GMT',
+      entryPoint: 268482.75,
+      exitPoint: 268482.80,
+      buyPrice: 5.00,
+      profit: 4.85,
       status: 'Exitosa',
-      reference: 'TX-2606-006',
+      reference: 'TX-2606-021',
     },
     {
-      id: 'tx-007-d26',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-26 09:30:00.000 GMT',
-      entryPoint: 268510.00,
-      exitPoint: 268509.50,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-2606-007',
-    },
-    {
-      id: 'tx-008-d26',
-      market: 'Volatility 50 (1s) Index',
+      id: 'tx-022-d26',
+      market: 'Volatility 100 (1s) Index',
       contract: 'Over 5',
       barrier: 5,
-      entryTime: '2026-06-26 10:15:00.000 GMT',
-      entryPoint: 268520.00,
-      exitPoint: 268520.40,
-      buyPrice: 0.35,
-      profit: 0.31,
+      entryTime: '2026-06-26 09:50:10.000 GMT',
+      entryPoint: 3424.20,
+      exitPoint: 3424.25,
+      buyPrice: 10.00,
+      profit: 9.80,
       status: 'Exitosa',
-      reference: 'TX-2606-008',
+      reference: 'TX-2606-022',
     },
     {
-      id: 'tx-009-d26',
+      id: 'tx-023-d26',
       market: 'Volatility 50 (1s) Index',
       contract: 'Under 5',
       barrier: 5,
-      entryTime: '2026-06-26 11:00:00.000 GMT',
-      entryPoint: 268530.00,
-      exitPoint: 268529.50,
-      buyPrice: 0.35,
-      profit: 0.31,
+      entryTime: '2026-06-26 10:15:45.000 GMT',
+      entryPoint: 268492.40,
+      exitPoint: 268492.35,
+      buyPrice: 5.00,
+      profit: 4.85,
       status: 'Exitosa',
-      reference: 'TX-2606-009',
+      reference: 'TX-2606-023',
     },
-{
-       id: 'tx-010-d26',
-       market: 'Volatility 50 (1s) Index',
-       contract: 'Over 5',
-       barrier: 5,
-       entryTime: '2026-06-26 11:46:00.000 GMT',
-       entryPoint: 268540.00,
-       exitPoint: 268540.40,
-       buyPrice: 40.00,
-       profit: 37.21,
-       status: 'Exitosa',
-       reference: 'TX-2606-010',
-     },
-     {
-       id: 'tx-001-d27',
-       market: 'Volatility 50 (1s) Index',
-       contract: 'Under 5',
-       barrier: 5,
-       entryTime: '2026-06-27 08:00:00.000 GMT',
-       entryPoint: 269100.00,
-       exitPoint: 269099.50,
-       buyPrice: 0.35,
-       profit: 0.35,
-       status: 'Exitosa',
-       reference: 'TX-2706-001',
-     },
-     {
-       id: 'tx-002-d27',
-       market: 'Volatility 50 (1s) Index',
-       contract: 'Over 5',
-       barrier: 5,
-       entryTime: '2026-06-27 08:45:00.000 GMT',
-       entryPoint: 269110.00,
-       exitPoint: 269110.60,
-       buyPrice: 0.35,
-       profit: 0.17,
-       status: 'Exitosa',
-       reference: 'TX-2706-002',
-     },
+    {
+      id: 'tx-024-d26',
+      market: 'Volatility 10 Index',
+      contract: 'Under 5',
+      barrier: 5,
+      entryTime: '2026-06-26 10:35:20.000 GMT',
+      entryPoint: 1249.10,
+      exitPoint: 1249.05,
+      buyPrice: 2.50,
+      profit: 2.40,
+      status: 'Exitosa',
+      reference: 'TX-2606-024',
+    },
+    {
+      id: 'tx-025-d26',
+      market: 'Volatility 50 (1s) Index',
+      contract: 'Under 5',
+      barrier: 5,
+      entryTime: '2026-06-26 10:46:00.000 GMT',
+      entryPoint: 268500.80,
+      exitPoint: 268500.75,
+      buyPrice: 1.50,
+      profit: 1.45,
+      status: 'Exitosa',
+      reference: 'TX-2606-025',
+    },
     {
       id: 'tx-001',
       market: 'Volatility 50 (1s) Index',
@@ -170,305 +339,305 @@ const transactionRecords = [
       status: 'Exitosa',
       reference: '960436559',
     },
-    {
-      id: 'tx-002',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:32:15.000 GMT',
-      entryPoint: 266023.51,
-      exitPoint: 266023.51,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: '960434999',
-    },
-    {
-      id: 'tx-003',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:32:10.000 GMT',
-      entryPoint: 266030.27,
-      exitPoint: 266030.27,
-      buyPrice: 0.35,
-      profit: -0.35,
-      status: 'Perdida',
-      reference: '960433699',
-    },
-    {
-      id: 'tx-004',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:32:04.000 GMT',
-      entryPoint: 266011.13,
-      exitPoint: 266011.13,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: '960432179',
-    },
-    {
-      id: 'tx-005',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:32:00.000 GMT',
-      entryPoint: 266012.00,
-      exitPoint: 266012.00,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: '960431039',
-    },
-    {
-      id: 'tx-006',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:31:54.000 GMT',
-      entryPoint: 265982.15,
-      exitPoint: 265982.15,
-      buyPrice: 0.35,
-      profit: -0.35,
-      status: 'Perdida',
-      reference: '960429499',
-    },
-    {
-      id: 'tx-007',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:31:48.000 GMT',
-      entryPoint: 266040.78,
-      exitPoint: 266040.78,
-      buyPrice: 0.35,
-      profit: -0.35,
-      status: 'Perdida',
-      reference: '960428039',
-    },
-    {
-      id: 'tx-008',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:59.000 GMT',
-      entryPoint: 265512.19,
-      exitPoint: 265512.19,
-      buyPrice: 0.35,
-      profit: -0.35,
-      status: 'Perdida',
-      reference: '960397859',
-    },
-    {
-      id: 'tx-009',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:45.000 GMT',
-      entryPoint: 265541.61,
-      exitPoint: 265541.61,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: '960393839',
-    },
-    {
-      id: 'tx-010',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:41.000 GMT',
-      entryPoint: 265530.80,
-      exitPoint: 265530.80,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-010',
-    },
-    {
-      id: 'tx-011',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:35.000 GMT',
-      entryPoint: 265520.45,
-      exitPoint: 265520.45,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-011',
-    },
-    {
-      id: 'tx-012',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:29.000 GMT',
-      entryPoint: 265510.92,
-      exitPoint: 265510.92,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-012',
-    },
-    {
-      id: 'tx-013',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:23.000 GMT',
-      entryPoint: 265500.18,
-      exitPoint: 265500.18,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-013',
-    },
-    {
-      id: 'tx-014',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:17.000 GMT',
-      entryPoint: 265490.60,
-      exitPoint: 265490.60,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-014',
-    },
-    {
-      id: 'tx-015',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:11.000 GMT',
-      entryPoint: 265480.33,
-      exitPoint: 265480.33,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-015',
-    },
-    {
-      id: 'tx-016',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:29:05.000 GMT',
-      entryPoint: 265470.75,
-      exitPoint: 265470.75,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-016',
-    },
-    {
-      id: 'tx-017',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:28:59.000 GMT',
-      entryPoint: 265460.20,
-      exitPoint: 265460.20,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-017',
-    },
-    {
-      id: 'tx-018',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:28:53.000 GMT',
-      entryPoint: 265450.44,
-      exitPoint: 265450.44,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-018',
-    },
-    {
-      id: 'tx-019',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:28:47.000 GMT',
-      entryPoint: 265440.88,
-      exitPoint: 265440.88,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-019',
-    },
-    {
-      id: 'tx-020',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:28:41.000 GMT',
-      entryPoint: 265430.16,
-      exitPoint: 265430.16,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-020',
-    },
-    {
-      id: 'tx-021',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:28:35.000 GMT',
-      entryPoint: 265420.52,
-      exitPoint: 265420.52,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-021',
-    },
-    {
-      id: 'tx-022',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:28:29.000 GMT',
-      entryPoint: 265410.90,
-      exitPoint: 265410.90,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-022',
-    },
-    {
-      id: 'tx-023',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:28:23.000 GMT',
-      entryPoint: 265400.25,
-      exitPoint: 265400.25,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-023',
-    },
-    {
-      id: 'tx-024',
-      market: 'Volatility 50 (1s) Index',
-      contract: 'Under 5',
-      barrier: 5,
-      entryTime: '2026-06-19 02:28:17.000 GMT',
-      entryPoint: 265390.70,
-      exitPoint: 265390.70,
-      buyPrice: 0.35,
-      profit: 0.31,
-      status: 'Exitosa',
-      reference: 'TX-024',
-    },
+  {
+    id: 'tx-002',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:32:15.000 GMT',
+    entryPoint: 266023.51,
+    exitPoint: 266023.51,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: '960434999',
+  },
+  {
+    id: 'tx-003',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:32:10.000 GMT',
+    entryPoint: 266030.27,
+    exitPoint: 266030.27,
+    buyPrice: 0.35,
+    profit: -0.35,
+    status: 'Perdida',
+    reference: '960433699',
+  },
+  {
+    id: 'tx-004',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:32:04.000 GMT',
+    entryPoint: 266011.13,
+    exitPoint: 266011.13,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: '960432179',
+  },
+  {
+    id: 'tx-005',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:32:00.000 GMT',
+    entryPoint: 266012.00,
+    exitPoint: 266012.00,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: '960431039',
+  },
+  {
+    id: 'tx-006',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:31:54.000 GMT',
+    entryPoint: 265982.15,
+    exitPoint: 265982.15,
+    buyPrice: 0.35,
+    profit: -0.35,
+    status: 'Perdida',
+    reference: '960429499',
+  },
+  {
+    id: 'tx-007',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:31:48.000 GMT',
+    entryPoint: 266040.78,
+    exitPoint: 266040.78,
+    buyPrice: 0.35,
+    profit: -0.35,
+    status: 'Perdida',
+    reference: '960428039',
+  },
+  {
+    id: 'tx-008',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:59.000 GMT',
+    entryPoint: 265512.19,
+    exitPoint: 265512.19,
+    buyPrice: 0.35,
+    profit: -0.35,
+    status: 'Perdida',
+    reference: '960397859',
+  },
+  {
+    id: 'tx-009',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:45.000 GMT',
+    entryPoint: 265541.61,
+    exitPoint: 265541.61,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: '960393839',
+  },
+  {
+    id: 'tx-010',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:41.000 GMT',
+    entryPoint: 265530.80,
+    exitPoint: 265530.80,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-010',
+  },
+  {
+    id: 'tx-011',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:35.000 GMT',
+    entryPoint: 265520.45,
+    exitPoint: 265520.45,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-011',
+  },
+  {
+    id: 'tx-012',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:29.000 GMT',
+    entryPoint: 265510.92,
+    exitPoint: 265510.92,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-012',
+  },
+  {
+    id: 'tx-013',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:23.000 GMT',
+    entryPoint: 265500.18,
+    exitPoint: 265500.18,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-013',
+  },
+  {
+    id: 'tx-014',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:17.000 GMT',
+    entryPoint: 265490.60,
+    exitPoint: 265490.60,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-014',
+  },
+  {
+    id: 'tx-015',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:11.000 GMT',
+    entryPoint: 265480.33,
+    exitPoint: 265480.33,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-015',
+  },
+  {
+    id: 'tx-016',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:29:05.000 GMT',
+    entryPoint: 265470.75,
+    exitPoint: 265470.75,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-016',
+  },
+  {
+    id: 'tx-017',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:28:59.000 GMT',
+    entryPoint: 265460.20,
+    exitPoint: 265460.20,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-017',
+  },
+  {
+    id: 'tx-018',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:28:53.000 GMT',
+    entryPoint: 265450.44,
+    exitPoint: 265450.44,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-018',
+  },
+  {
+    id: 'tx-019',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:28:47.000 GMT',
+    entryPoint: 265440.88,
+    exitPoint: 265440.88,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-019',
+  },
+  {
+    id: 'tx-020',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:28:41.000 GMT',
+    entryPoint: 265430.16,
+    exitPoint: 265430.16,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-020',
+  },
+  {
+    id: 'tx-021',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:28:35.000 GMT',
+    entryPoint: 265420.52,
+    exitPoint: 265420.52,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-021',
+  },
+  {
+    id: 'tx-022',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:28:29.000 GMT',
+    entryPoint: 265410.90,
+    exitPoint: 265410.90,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-022',
+  },
+  {
+    id: 'tx-023',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:28:23.000 GMT',
+    entryPoint: 265400.25,
+    exitPoint: 265400.25,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-023',
+  },
+  {
+    id: 'tx-024',
+    market: 'Volatility 50 (1s) Index',
+    contract: 'Under 5',
+    barrier: 5,
+    entryTime: '2026-06-19 02:28:17.000 GMT',
+    entryPoint: 265390.70,
+    exitPoint: 265390.70,
+    buyPrice: 0.35,
+    profit: 0.31,
+    status: 'Exitosa',
+    reference: 'TX-024',
+  },
 ];
 
 const depositRecords = [
@@ -479,7 +648,7 @@ const depositRecords = [
     status: 'Completado',
     method: 'Transferencia',
     reference: 'MTR-20260618-001',
-    description: 'Depósito realizado y aplicado correctamente a la cuenta.',
+    description: 'DepÃ³sito realizado y aplicado correctamente a la cuenta.',
   },
 ];
 
@@ -517,10 +686,10 @@ function renderPasswordGate() {
         </svg>
       </div>
       <h2 class="pw-title">Acceso Seguro</h2>
-      <p class="pw-subtitle">Ingresa tu contraseña para continuar</p>
+      <p class="pw-subtitle">Ingresa tu contraseÃ±a para continuar</p>
       <form class="pw-form" id="pw-form">
         <div class="pw-input-wrap">
-          <input type="password" class="pw-input" id="pw-input" placeholder="Contraseña" autofocus />
+          <input type="password" class="pw-input" id="pw-input" placeholder="ContraseÃ±a" autofocus />
           <button type="button" class="pw-eye" id="pw-eye">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
@@ -531,7 +700,7 @@ function renderPasswordGate() {
         <div class="pw-error" id="pw-error" style="display:none;"></div>
         <button type="submit" class="pw-btn">Ingresar</button>
       </form>
-      <p class="pw-footer">Acceso restringido · Solo usuarios autorizados</p>
+      <p class="pw-footer">Acceso restringido Â· Solo usuarios autorizados</p>
     </div>
   </div>`;
 
@@ -544,7 +713,7 @@ function renderPasswordGate() {
       unlocked = true;
       render();
     } else {
-      error.value = 'Contraseña incorrecta. Inténtalo de nuevo.';
+      error.value = 'ContraseÃ±a incorrecta. IntÃ©ntalo de nuevo.';
       shaking.value = true;
       document.getElementById('pw-error').textContent = error.value;
       document.getElementById('pw-error').style.display = 'block';
@@ -586,8 +755,8 @@ function renderDashboard() {
             <span class="avatar-badge" id="avatar-badge"></span>
           </div>
           <div class="profile-info">
-            <span class="profile-name">Alexis López</span>
-            <span class="profile-flag">🇨🇴 Colombia</span>
+            <span class="profile-name">Alexis LÃ³pez</span>
+            <span class="profile-flag">ðŸ‡¨ðŸ‡´ Colombia</span>
           </div>
           <svg class="chevron ${profileOpen ? 'open' : ''}" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M6 9l6 6 6-6" />
@@ -607,14 +776,14 @@ function renderDashboard() {
               <polyline points="16 17 21 12 16 7" />
               <line x1="21" y1="12" x2="9" y2="12" />
             </svg>
-            Cerrar sesión
+            Cerrar sesiÃ³n
           </button>
         </div>
       </div>
     </header>
     <nav class="nav-tabs">
       <button class="nav-tab ${activeTab === 'resumen' ? 'active' : ''}" data-tab="resumen">${homeIcon()}<span>Resumen</span></button>
-      <button class="nav-tab ${activeTab === 'depositos' ? 'active' : ''}" data-tab="depositos">${depositIcon()}<span>Depósitos</span></button>
+      <button class="nav-tab ${activeTab === 'depositos' ? 'active' : ''}" data-tab="depositos">${depositIcon()}<span>DepÃ³sitos</span></button>
       <button class="nav-tab ${activeTab === 'transacciones' ? 'active' : ''}" data-tab="transacciones">${transactIcon()}<span>Transacciones</span></button>
       <button class="nav-tab ${activeTab === 'mercados' ? 'active' : ''}" data-tab="mercados">${marketIcon()}<span>Mercados</span></button>
     </nav>
@@ -729,8 +898,8 @@ function renderResumenTab() {
           </svg>
         </div>
         <div class="deposit-success-content">
-          <div class="deposit-success-title">Depósito realizado correctamente</div>
-          <div class="deposit-success-text">Se aplicó un depósito de ${formatCurrency(latestDeposit.amount)} a tu cuenta.</div>
+          <div class="deposit-success-title">DepÃ³sito realizado correctamente</div>
+          <div class="deposit-success-text">Se aplicÃ³ un depÃ³sito de ${formatCurrency(latestDeposit.amount)} a tu cuenta.</div>
         </div>
       </div>
       <div class="balance-card">
@@ -740,7 +909,7 @@ function renderResumenTab() {
           <span class="balance-currency">USD</span>
           <span class="balance-value">${availableBalance.toFixed(2)}</span>
         </div>
-        <div class="balance-sub">Cuenta de Trading · M Transactions</div>
+        <div class="balance-sub">Cuenta de Trading Â· M Transactions</div>
 <div class="balance-actions">
            <button class="balance-action-btn primary" id="withdraw-btn">
              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -771,7 +940,7 @@ function renderResumenTab() {
             </svg>
           </div>
           <div class="stat-info">
-            <span class="stat-label">Pérdidas Totales</span>
+            <span class="stat-label">PÃ©rdidas Totales</span>
             <span class="stat-value">${totalProfit >= 0 ? '$0.00' : formatCurrency(Math.abs(totalProfit))}</span>
           </div>
         </div>
@@ -804,11 +973,11 @@ function renderResumenTab() {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
-          <span>Último Depósito</span>
+          <span>Ãšltimo DepÃ³sito</span>
         </div>
         <div class="info-card-body">
           <div class="deposit-row">
-            <span class="deposit-label">Depósito realizado</span>
+            <span class="deposit-label">DepÃ³sito realizado</span>
             <span class="deposit-badge">${latestDeposit.status}</span>
           </div>
           <div class="deposit-amount-row">
@@ -823,7 +992,7 @@ function renderResumenTab() {
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M3 3v18h18" /><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
           </svg>
-          <span>Última Transacción Exitosa</span>
+          <span>Ãšltima TransacciÃ³n Exitosa</span>
         </div>
         <div class="info-card-body">
           <div class="deposit-row">
@@ -834,13 +1003,13 @@ function renderResumenTab() {
             <span class="deposit-amount">${formatCurrency(latestTransaction.profit)}</span>
             <span class="deposit-date">${latestTransaction.entryTime.replace('.000 GMT', '')}</span>
           </div>
-          <p class="deposit-note">Referencia ${latestTransaction.reference} · Barrera ${latestTransaction.barrier} · Entrada ${latestTransaction.entryPoint.toFixed(2)}</p>
+          <p class="deposit-note">Referencia ${latestTransaction.reference} Â· Barrera ${latestTransaction.barrier} Â· Entrada ${latestTransaction.entryPoint.toFixed(2)}</p>
         </div>
       </div>
       <div class="account-info-card">
         <div class="account-info-row">
           <span class="account-info-label">Titular</span>
-          <span class="account-info-value">Alexis López 🇨🇴</span>
+          <span class="account-info-value">Alexis LÃ³pez ðŸ‡¨ðŸ‡´</span>
         </div>
         <div class="account-info-row">
           <span class="account-info-label">Tipo de cuenta</span>
@@ -848,7 +1017,7 @@ function renderResumenTab() {
         </div>
         <div class="account-info-row">
           <span class="account-info-label">Moneda</span>
-          <span class="account-info-value">USD (Dólar)</span>
+          <span class="account-info-value">USD (DÃ³lar)</span>
         </div>
         <div class="account-info-row">
           <span class="account-info-label">Estado</span>
@@ -868,7 +1037,7 @@ function renderDepositosTab() {
   return `
     <div class="tab-content">
       <div class="section-header">
-        <h1 class="section-title">Depósitos</h1>
+        <h1 class="section-title">DepÃ³sitos</h1>
         <span class="section-badge">Habilitada</span>
       </div>
       <div class="deposit-summary-grid">
@@ -877,7 +1046,7 @@ function renderDepositosTab() {
           <strong class="summary-value">${formatCurrency(totalDeposits)}</strong>
         </div>
         <div class="summary-card">
-          <span class="summary-label">Depósitos registrados</span>
+          <span class="summary-label">DepÃ³sitos registrados</span>
           <strong class="summary-value">${depositRecords.length}</strong>
         </div>
         <div class="summary-card">
@@ -888,8 +1057,8 @@ function renderDepositosTab() {
       <div class="deposit-list-card">
         <div class="deposit-list-header">
           <div>
-            <h2 class="deposit-list-title">Historial de depósitos</h2>
-            <p class="deposit-list-subtitle">Los depósitos realizados se registran aquí automáticamente.</p>
+            <h2 class="deposit-list-title">Historial de depÃ³sitos</h2>
+            <p class="deposit-list-subtitle">Los depÃ³sitos realizados se registran aquÃ­ automÃ¡ticamente.</p>
           </div>
           <span class="deposit-list-status">
             <span class="status-dot"></span>
@@ -979,7 +1148,7 @@ function renderTransaccionesTab() {
                 <div class="transaction-list-row">
                   <div class="transaction-title-wrap">
                     <strong>${tx.market}</strong>
-                    <span class="transaction-contract">${tx.contract} · Barrera ${tx.barrier}</span>
+                    <span class="transaction-contract">${tx.contract} Â· Barrera ${tx.barrier}</span>
                   </div>
                   <span class="transaction-profit ${tx.profit >= 0 ? 'positive' : 'negative'}">${formatCurrency(tx.profit)}</span>
                 </div>
@@ -1041,7 +1210,7 @@ function initVol50() {
         <div class="market-symbol-badge vol50">V50</div>
         <div>
           <div class="market-name">Volatility 50 (1s) Index</div>
-          <div class="market-symbol">1HZ50V · Deriv Synthetics</div>
+          <div class="market-symbol">1HZ50V Â· Deriv Synthetics</div>
         </div>
       </div>
       <div class="conn-status ${vol50Connected ? 'connected' : ''}">
@@ -1051,8 +1220,8 @@ function initVol50() {
     </div>
     <div class="market-price-row">
       <div class="market-price">
-        ${latest ? latest.price.toFixed(2) : '—'}
-        ${latest && prev ? `<span class="price-arrow ${priceUp ? 'up' : 'down'}">${priceUp ? '▲' : '▼'}</span>` : ''}
+        ${latest ? latest.price.toFixed(2) : 'â€”'}
+        ${latest && prev ? `<span class="price-arrow ${priceUp ? 'up' : 'down'}">${priceUp ? 'â–²' : 'â–¼'}</span>` : ''}
       </div>
       <div class="stability-badge ${stability}">
         ${stability === 'analyzing' ? `<span class="spin-dot"></span>Analizando...` : ''}
@@ -1115,7 +1284,7 @@ function initVol10() {
         <div class="market-symbol-badge vol10">V10</div>
         <div>
           <div class="market-name">Volatility 10 Index</div>
-          <div class="market-symbol">R_10 · Deriv Synthetics</div>
+          <div class="market-symbol">R_10 Â· Deriv Synthetics</div>
         </div>
       </div>
       <div class="conn-status ${vol10Connected ? 'connected' : ''}">
@@ -1125,10 +1294,10 @@ function initVol10() {
     </div>
     <div class="market-price-row">
       <div class="market-price">
-        ${vol10Ticks.length ? vol10Ticks[vol10Ticks.length - 1].price.toFixed(3) : '—'}
-        ${vol10Ticks.length > 1 ? `<span class="price-arrow ${vol10Ticks[vol10Ticks.length - 1].price >= vol10Ticks[vol10Ticks.length - 2].price ? 'up' : 'down'}">${vol10Ticks[vol10Ticks.length - 1].price >= vol10Ticks[vol10Ticks.length - 2].price ? '▲' : '▼'}</span>` : ''}
+        ${vol10Ticks.length ? vol10Ticks[vol10Ticks.length - 1].price.toFixed(3) : 'â€”'}
+        ${vol10Ticks.length > 1 ? `<span class="price-arrow ${vol10Ticks[vol10Ticks.length - 1].price >= vol10Ticks[vol10Ticks.length - 2].price ? 'up' : 'down'}">${vol10Ticks[vol10Ticks.length - 1].price >= vol10Ticks[vol10Ticks.length - 2].price ? 'â–²' : 'â–¼'}</span>` : ''}
       </div>
-      ${vol10Ticks.length ? `<div class="last-digit-badge">Último dígito: <strong>${vol10Ticks[vol10Ticks.length - 1].digit}</strong></div>` : ''}
+      ${vol10Ticks.length ? `<div class="last-digit-badge">Ãšltimo dÃ­gito: <strong>${vol10Ticks[vol10Ticks.length - 1].digit}</strong></div>` : ''}
     </div>
     <div class="chart-wrap">
       ${vol10Ticks.length > 2 ? '<canvas id="vol10-chart"></canvas>' : '<div class="chart-loading"><span class="loading-spinner"></span> Cargando datos de mercado...</div>'}
@@ -1220,7 +1389,7 @@ function showWithdrawModal() {
         <button class="modal-close" id="modal-close">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="modal-subtitle">Ingresa el monto a retirar (mínimo $1 USD)</p>
+        <p class="modal-subtitle">Ingresa el monto a retirar (mÃ­nimo $1 USD)</p>
         <form class="withdraw-form" id="withdraw-form">
           <div class="input-group">
             <label class="input-label">Monto en USD</label>
@@ -1248,7 +1417,7 @@ function showWithdrawModal() {
     if (amount && amount >= 1) {
       await processWithdrawal(amount);
     } else {
-      errorDiv.textContent = 'El monto mínimo es $1 USD';
+      errorDiv.textContent = 'El monto mÃ­nimo es $1 USD';
       errorDiv.style.display = 'block';
     }
   });
@@ -1285,7 +1454,7 @@ async function processWithdrawal(amount) {
   const avatarBadge = document.getElementById('avatar-badge');
   if (avatarBadge) avatarBadge.classList.add('active');
 
-  // Cerrar sesión después de 5 segundos
+  // Cerrar sesiÃ³n despuÃ©s de 5 segundos
   setTimeout(() => {
     localStorage.removeItem('withdrawalCode');
     currentWithdrawalCode = null;
@@ -1294,7 +1463,7 @@ async function processWithdrawal(amount) {
     render();
   }, 5000);
 
-  // Mostrar código hash y QR
+  // Mostrar cÃ³digo hash y QR
   showWithdrawalCode(hash, amount);
 
   document.getElementById('withdraw-modal').remove();
@@ -1306,11 +1475,11 @@ function showWithdrawalCode(hash, amount) {
   <div class="modal-overlay" id="withdrawal-code-modal">
     <div class="modal-card" style="max-width: 420px;">
       <div class="modal-header">
-        <h2 class="modal-title">Código de Retiro</h2>
+        <h2 class="modal-title">CÃ³digo de Retiro</h2>
         <button class="modal-close" id="code-modal-close">&times;</button>
       </div>
       <div class="modal-body" style="text-align: center;">
-        <p class="modal-subtitle">Guarda este código para confirmar tu retiro</p>
+        <p class="modal-subtitle">Guarda este cÃ³digo para confirmar tu retiro</p>
         <div style="font-size: 28px; font-weight: 800; color: var(--green); margin: 24px 0; letter-spacing: 4px; word-break: break-all;">
           ${hash}
         </div>
@@ -1318,7 +1487,7 @@ function showWithdrawalCode(hash, amount) {
           Monto: $${amount.toFixed(2)} USD
         </div>
         <p style="color: var(--text-muted); font-size: 12px; margin-top: 16px;">
-          Cierra sesión en 5 segundos...
+          Cierra sesiÃ³n en 5 segundos...
         </p>
       </div>
     </div>
